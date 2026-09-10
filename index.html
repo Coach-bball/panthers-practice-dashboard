@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panthers Practice Analytics</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --text-main: #f0f0f0;
+      --text-muted: #a0a0a0;
+      --accent: #2c7bb6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 24px 16px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      background-color: #ffffff; /* Ensures courts have high contrast */
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 520px;
+      border: none;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Panthers Practice Analytics</h1>
+      <p>Shooting Efficiency, Hustle & Shot Distribution</p>
+    </header>
+
+    <!-- Leaderboards -->
+    <section class="card">
+      <h2>Performance Leaderboard</h2>
+      <img src="practice_leaderboards.png" alt="Panthers Practice Leaderboards" loading="lazy">
+    </section>
+
+    <!-- Team Heatmap -->
+    <section class="card">
+      <h2>Team Shot Distribution & Efficiency</h2>
+      <img src="team_practice_shot_chart.png" alt="Team Practice Shot Chart" loading="lazy">
+    </section>
+
+    <!-- Individual Charts Matrix -->
+    <section class="card">
+      <h2>Individual Shot Charts</h2>
+      <img src="practice_shot_charts_final.png" alt="Individual Shot Charts" loading="lazy">
+    </section>
+
+    <!-- Statistics Table -->
+    <section class="card">
+      <h2>Statistical Breakdown</h2>
+      <div class="table-container">
+        <iframe src="practice_stats_table.html" title="Practice Statistics Table"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      Panthers Basketball Analytics &bull; Updated Automatically
+    </footer>
+  </div>
+
+</body>
+</html>
